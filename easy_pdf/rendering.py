@@ -19,13 +19,16 @@ def fetch_resources(uri, rel):
     """
     Retrieves embeddable resource from given ``uri``.
 
-    For now only local resources (images, fonts) are supported.
+    Url with domain and local resources (images, fonts) are supported.
 
     :param str uri: path or url to image or font resource
     :returns: path to local resource file.
     :rtype: str
     :raises: :exc:`~easy_pdf.exceptions.UnsupportedMediaPathException`
     """
+    if uri.startswith("http://") or uri.startswith("https://"):
+        return uri
+
     if settings.STATIC_URL and uri.startswith(settings.STATIC_URL):
         path = os.path.join(settings.STATIC_ROOT, uri.replace(settings.STATIC_URL, ""))
     elif settings.MEDIA_URL and uri.startswith(settings.MEDIA_URL):
