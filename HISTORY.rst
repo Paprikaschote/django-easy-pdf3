@@ -3,6 +3,11 @@
 History
 -------
 
+0.1.5 (2021-01-30)
+++++++++++++++++++
+
+* Add Amazon S3 support for static and media files
+
 0.1.4 (2021-01-30)
 ++++++++++++++++++
 
