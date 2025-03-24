@@ -3,6 +3,11 @@
 History
 -------
 
+0.1.6 (2025-03-24)
+++++++++++++++++++
+
+* change license-file to license_file in setup.cfg (PEP621)
+
 0.1.5 (2021-01-30)
 ++++++++++++++++++
 
